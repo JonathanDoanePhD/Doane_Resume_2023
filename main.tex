@@ -1,0 +1,578 @@
+\documentclass[12pt]{resume}
+\usepackage{fontawesome}
+\geometry{margin=1.25in, top=0.25in, bottom=0.25in, marginparsep=.1in}
+\usepackage{hyperref}%[hidelinks]
+\hypersetup{colorlinks=true, urlcolor=blue}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{anyfontsize}
+\usepackage{calc}
+\usepackage{arydshln}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\mySpace}{.4in}
+\newcommand{\myLeft}{\hspace*{-\mySpace}}
+\newcommand{\myRight}{\hspace*{\mySpace}}
+
+\newcommand{\MBGray}[1]{\textcolor{black!60}{#1}}
+\newcommand{\myDateGray}[1]{\MBGray{#1}}
+
+\usepackage{ifthen}
+\newboolean{Month}
+\setboolean{Month}{true}
+
+\ifthenelse{\boolean{Month}}%
+{\newcommand{\myDS}{\scriptsize}}%
+{\newcommand{\myDS}{\small}}
+
+\ifthenelse{\boolean{Month}}%
+{\newcommand{\myDateSize}[1]{\resizebox{\widthof{May 2020}}{\height}{#1}}}%
+{\newcommand{\myDateSize}[1]{\resizebox{\widthof{2020}}{\height}{#1}}}
+
+\newcommand{\myPresent}{\myDateSize{\uppercase{\ifthenelse{\boolean{Month}}{Present}{Pres}}}}
+\newcommand{\myMonth}[1]{\ifthenelse{\boolean{Month}}{#1}{}}
+
+\newcommand{\SkipEmpty}[2]{\ifthenelse{\equal{#1}{}}{#1}{#2}}
+
+\newcommand{\MYDMYP}[6]{\marginpar{\fontfamily{cmr}\selectfont\hbox{\myDateGray{\myDS%
+\SkipEmpty{#1}{\myMonth{\resizebox{\widthof{Apr}}{\height}{#1}} }%
+\SkipEmpty{#2}{\resizebox{\widthof{2022}}{\height}{#2}}%
+\SkipEmpty{#3}{ - }%
+\SkipEmpty{#4}{\myMonth{\resizebox{\widthof{Apr}}{\height}{#4}} }%
+\SkipEmpty{#5}{\resizebox{\widthof{2020}}{\height}{#5}}%
+\SkipEmpty{#6}{{Present}}%
+}}}}
+
+
+
+
+
+
+
+\newcommand{\mySubsection}[1]{\myLeft\textsc{\textbf{#1}}}
+
+\newcommand{\myName}{\textbf{{\Large Jonathan Doane}}}
+\newcommand{\myNameSkip}{}%\bigskip
+
+\newcommand{\mysize}[1]{}
+\newcommand{\myskip}{\smallskip}
+\newcommand{\myinnerskip}{\smallskip}
+\newcommand{\mytalkskip}{\smallskip}
+\newcommand{\myrulefill}{\vspace*{-.15in}\myLeft\myLeft\hrulefill}
+\newcommand{\mySkillsStyle}[1]{\textbf{\texttt{#1}}}
+
+
+\newcommand{\maybeskip}{\smallskip}
+\newcommand{\maybeskipt}{ }
+\newcommand{\SubSecSkip}{\smallskip}
+
+
+\newcommand{\mylarge}[1]{{\fontsize{14pt}{14pt}\selectfont #1 }}
+
+
+\newcommand{\mySection}[1]{\myLeft\myLeft\uppercase{\textbf{#1}}
+
+\myrulefill
+
+\maybeskipt}
+
+
+
+
+
+
+
+
+\newcommand{\Erdos}{Erd\H{o}s}
+\newcommand{\myRole}{data scientist} %Machine Learning Engineer
+
+\newcommand{\mySep}{\vfill}
+\newcommand{\myDetail}[1]{\vspace*{-.2in}\MBGray{#1}}
+
+
+
+
+
+
+
+
+
+
+\begin{document}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+{
+\fontfamily{cmr}\selectfont
+\fontsize{12pt}{14pt}\selectfont
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+
+\myName
+
+\myNameSkip
+
+%\resizebox{\linewidth}{!}%
+{\begin{tabular}{c|c|cccc}
+\href{tel:+13154162356}{(315)416-2356}
+&
+\href{mailto:JonathanDoanePhD@gmail.com}{%
+\textcolor{blue}{JonathanDoanePhD@gmail.com}}
+&
+\href{https://www.linkedin.com/in/jonathan-doane-ph-d-9403b591/}{%
+\faLinkedinSquare}
+&
+\href{https://github.com/JonathanDoanePhD}{%
+\faGithub}
+&
+\href{https://jonathandoanephd.github.io/Jonathan-Doane-Portfolio/}{%
+\faGlobe}
+\\
+\end{tabular}}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+\mySection{Education}
+
+% \hspace*{-.75in}
+% % \faGraduationCap
+% \hspace*{.4in}
+\mySubsection{Binghamton University:}
+{Ph.D.\ Mathematical Sciences}
+\MBGray{\footnotesize GPA 3.975/4}
+\MYDMYP{Jul}{2022}{}{}{}{}
+
+%\hspace*{1.333in}
+\href{https://www.proquest.com/dissertations-theses/boolean-twice-monoids/docview/2719428059/se-2}{%
+Dissertation:  \textsl{Boolean Twice Monoids}}
+
+\myDetail{\begin{itemize}
+\item%[\textcolor{black}{\footnotesize \textbullet}]
+\textcolor{black}{Taught Linear Algebra, Calculus I-II, Pre-Calculus, Probability \& Statistics.}
+\item
+\textit{Clark Diversity Fellowship},
+\textit{Dissertation Year Fellowship}, \textit{Mian Scholarship}.
+\end{itemize}}
+
+
+% \SubSecSkip
+
+
+% \mySubsection{Syracuse University:}
+% {M.S.\ Mathematics}
+% \MBGray{\footnotesize GPA 3.79/4}
+% \MYDMYP{May}{2017}{}{}{}{}
+
+
+% \myDetail{\begin{itemize}
+% \item Taught Probability \& Statistics.
+% \item \textit{Graduate Fellowship in Mathematics}.
+% \end{itemize}}
+
+
+% \SubSecSkip
+
+% \mySubsection{SUNY Potsdam:}
+% {M.A./B.A.\ Mathematics}
+% \MBGray{\footnotesize GPA 4/4 \& 3.95/4}
+% \MYDMYP{May}{2017}{}{}{}{}
+
+% \myDetail{\begin{itemize}
+% \item Tutored Linear Algebra, Differential Equations, Calculus I-III, Pre-Calculus, Set Theory.
+% \item \textit{Senior Majors Departmental Scholars}, 
+% \textit{Cateforis Award}, \textit{Sophomore MAAEM},  
+% \textit{Charlie Smith Prize for Calculus II}.
+% \end{itemize}}
+
+
+
+
+
+\mySep
+
+
+
+
+
+\mySection{Experience}
+
+
+\mySubsection{Planet Cents, Inc.:}
+Data Analyst, Funding
+\hfill
+\MBGray{\footnotesize Online}
+\MYDMYP{Nov}{2022}{-}{}{}{Present}
+
+\begin{itemize}
+\item
+I am training a new intern in updating and maintaining our legacy investors Excel sheet.
+\item
+I use crunchbase to identify hundreds of future investors focused on diversity, climate, and change.
+\end{itemize}
+
+
+\SubSecSkip
+
+
+\mySubsection{AI4ALL:}
+Instructor of Artificial Intelligence at College Pathways
+\hfill
+\MBGray{\footnotesize Online}
+\MYDMYP{Aug}{2022}{-}{}{}{Present}
+
+\begin{itemize}
+\item
+Lead weekly live instruction sessions, monitor student progress and provide timely interventions, increase students’ likelihood of success.
+\item%[\textcolor{black}{\footnotesize \textbullet}]
+\textcolor{black}{Analyze this data, summarize findings into a report and communicate results.}
+\end{itemize}
+
+
+\SubSecSkip
+
+
+\mySubsection{Tupper Lake Middle-High School:}
+Secondary Mathematics Teacher
+\hfill
+\MBGray{\footnotesize New York}
+\MYDMYP{Aug}{2022}{-}{}{}{Present}
+
+\myDetail{\begin{itemize}
+\item%[\textcolor{black}{\footnotesize \textbullet}]
+\textcolor{black}{Analyze student data and create visual reports.}
+\item
+Collaborate with department to provide timely interventions.
+\end{itemize}}
+
+
+\SubSecSkip
+
+
+\mySubsection{Bryant \& Stratton College:}
+Adjunct Faculty - Mathematics
+\hfill
+\MBGray{\footnotesize Online}
+\MYDMYP{Jan}{2022}{-}{}{}{Present}
+
+\myDetail{\begin{itemize}
+\item Analyze ambiguous, open-ended questions and contend results.
+\item Empower  students, facilitate growth.
+%using analytic reasoning and communication skills
+%\item Empower students of all ages and backgrounds through empathetic encouragement,
+%timely feedback, and frequent praise
+\end{itemize}}
+
+
+\SubSecSkip
+
+
+\mySubsection{PrepNow (StudyPoint):}
+Mathematics Tutor
+\hfill
+\MBGray{\footnotesize Online}
+\MYDMYP{Jul}{2022}{-}{}{}{Present}
+
+\myDetail{\begin{itemize}
+\item Tutor Calculus I and Trigonometry.
+\end{itemize}}
+
+
+
+
+
+\mySep
+
+
+
+
+
+\def\mySKILLS{1in}
+\def\myCERTS{3.93in}
+
+\parbox[t]{\mySKILLS}{\mySection{Skills}}
+\myRight\myRight%\myRight
+\parbox[t]{\myCERTS}{\mySection{Certifications}}
+
+\hspace*{-.705in}
+\parbox[t]{\mySKILLS}{~
+
+\begin{tabular}{l}
+\mySkillsStyle{Mathematics}
+\\
+\resizebox{1in}{!}{\begin{tikzpicture}
+\fill[color=black!10] rectangle (5,1) {};
+\filldraw[color=black!50!blue!75] rectangle (4.75,1) {};
+\draw[thick] rectangle (5,1) {};
+\end{tikzpicture}}
+\\
+\\
+\mySkillsStyle{Python}
+\\
+\resizebox{1in}{!}{\begin{tikzpicture}
+\fill[color=black!10] rectangle (5,1) {};
+\filldraw[color=black!50!blue!75] rectangle (4,1) {};
+\draw[thick] rectangle (5,1) {};
+\end{tikzpicture}}
+\\
+\\
+\mySkillsStyle{Data Analysis}
+\\
+\resizebox{1in}{!}{\begin{tikzpicture}
+\fill[color=black!10] rectangle (5,1) {};
+\filldraw[color=black!50!blue!75] rectangle (4,1) {};
+\draw[thick] rectangle (5,1) {};
+\end{tikzpicture}}
+\\
+\\
+\mySkillsStyle{Machine Learning}
+\\
+\resizebox{1in}{!}{\begin{tikzpicture}
+\fill[color=black!10] rectangle (5,1) {};
+\filldraw[color=black!50!blue!75] rectangle (3,1) {};
+\draw[thick] rectangle (5,1) {};
+\end{tikzpicture}}
+\\
+\\
+\mySkillsStyle{SQL}
+\\
+\resizebox{1in}{!}{\begin{tikzpicture}
+\fill[color=black!10] rectangle (5,1) {};
+\filldraw[color=black!50!blue!75] rectangle (3,1) {};
+\draw[thick] rectangle (5,1) {};
+\end{tikzpicture}}
+\\
+\end{tabular}
+}
+%\myRight\myRight\myRight\myRight%\myRight
+\hspace*{1.4in}
+\parbox[t]{\myCERTS}{~
+
+\vspace*{-.15in}
+\mySubsection{\Erdos{} Institute Data Science Boot Camp:}
+%\MYDMYP{May}{2022}{}{}{}{}
+
+\href{https://sites.google.com/view/doanemath/recent-work}{%
+Presentation:  \textsl{How many words?}}
+
+\href{https://github.com/JonathanDoanePhD/Count_Words_in_Audio}{%
+GitHub: \textsl{Count Words in Audio}}
+
+\begin{itemize}
+\item Doubled the accuracy of an existing spoken-word counting function.
+\item Implemented Machine Learning, in particular multiple linear regression.
+\item Completed the project within one week.
+\end{itemize}
+
+%Took an existing spoken-word counting function and doubled its accuracy.
+%This was achieve with machine learning, in particular multiple linear regression.
+
+
+\vspace*{.05in}
+\mySubsection{Western Ghats Challenge (Global Innovation Hackathon):}
+%\MYDMYP{April}{2022}{}{}{}{}
+\href{https://sites.google.com/view/doanemath/recent-work}{%
+Presentation:  \textsl{Participation Development Programs}}
+
+\begin{itemize}
+\item
+Researched how to increase traffic to mobile and web applications.
+
+\item
+Completed project within 24 hours.
+\end{itemize}
+
+%(\textit{\#2. Developing an automated amphibian ID recording database using machine learning and open-source amphibian audio recordings.})
+%I led and presented collaborative efforts with members across the globe, supporting the Western Ghats  campaign April 22 - 23, 2022. 
+%We addressed \textit{Sub-Challenge \#2.3.  Increasing awareness and involvement of our prototyped mobile app and website.}
+
+
+\vspace*{.05in}
+\mySubsection{Kaggle:} 
+
+\textit{Intro to Machine Learning},
+\textit{Intro to SQL}, 
+\textit{Python}, 
+\textit{Pandas}, 
+\textit{Data Cleaning}}
+
+
+
+
+
+\mySep
+
+
+
+
+
+%\mySection{Skills}
+%
+%\mySubsection{Languages \& Platforms:}
+%Python, 
+%Excel,
+%SciLab,
+%LaTeX,
+%Desmos, 
+%%Beamer, 
+%%TikZ,
+%%SciLab,
+%%Desmos, 
+%%GeoGebra,
+%RStudio, Microsoft SQL Server
+%
+%
+%\SubSecSkip
+%
+%
+%\mySubsection{Libraries:}
+%pandas, scikit-learn (sklearn),  NumPy,   SymPy, statistics,  TextBlob, NLTK
+%
+%
+%\SubSecSkip
+%
+%
+%\mySubsection{Machine Learning:}
+%Model training and validation, 
+%decision tree regression, 
+%correcting 
+%underfitting and overfitting,
+%data visualization, 
+%data cleaning
+
+
+
+
+
+%\mySep
+% 
+%
+%
+%\mySection{Teaching Experience}
+%
+%\mySubsection{Binghamton University:}
+%Instructor of Record, Teaching Assistant
+%\hfill
+%\MBGray{\footnotesize New York}
+%\MYDMYP{Jan}{2018}{-}{Aug}{2022}{}
+%
+%\myDetail{\begin{itemize}
+%\item
+%Probability and Statistics, Linear Algebra, Calculus, Pre-Calculus
+%\end{itemize}}
+%
+%
+%\SubSecSkip
+%
+%
+%\mySubsection{Syracuse University:}
+%\hfill
+%\MBGray{\footnotesize New York} 
+%\MYDMYP{Jun}{2016}{-}{May}{2017}{}
+%
+%\myDetail{\begin{itemize}
+%\item EDIT
+%\end{itemize}}
+%
+%
+%\SubSecSkip
+%
+%
+%\mySubsection{State University of New York at Potsdam:}
+%RStudio Support, Tutor
+%\hfill
+%\MBGray{\footnotesize New York} 
+%\MYDMYP{Sep}{2012}{-}{May}{2015}{}
+%
+%\myDetail{\begin{itemize}
+%\item EDIT
+%\end{itemize}}
+%
+%
+%
+%
+%\mySep
+
+
+
+
+
+
+
+\mySection{Projects}
+
+
+
+
+\SubSecSkip
+
+
+
+
+
+\SubSecSkip
+
+
+%\mySubsection{SQL analysis of start-up data:}
+%My investigation of start-up company data concluded that acquisition rates vary greatly between US states!
+%A follow-up project could use SQL to join state-specific data to find which underlying state factors influence start-up success the most.
+%(\href{https://github.com/MATHAnalogies/SQL-Just-a-quick-investigation-of-some-startup-company-data}{Git})
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item \href{https://github.com/JonathanDoanePhD/Python_Flask_Docker}{%
+Python\_Flask\_Docker}
+\item \href{https://github.com/JonathanDoanePhD/SQL_Assessment}{%
+SQL Assessment}
+\item \href{https://github.com/JonathanDoanePhD/SQL_Investigation_of_startup_company_data}{%
+SQL Investigation of start-up data}
+\item \href{https://github.com/JonathanDoanePhD/Auto_Grader_from_Rubric}{%
+Auto-grader from rubric}
+\item \href{https://github.com/JonathanDoanePhD/Collect_PDFs_from_eMATHinstruction}{%
+Collect and merge PDFs}
+\item
+\href{https://github.com/JonathanDoanePhD/Machine_Learning_Exercise_for_Self-Practice_PYTHON_JUPYTER/tree/main}{%
+Machine Learning Jupyter exercise}
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+\end{document}
